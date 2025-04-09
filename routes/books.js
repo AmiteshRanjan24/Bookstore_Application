@@ -4,7 +4,6 @@ const booksController = require("../controllers/books");
 const authMiddleware = require("../middleware/auth");
 const { validateBook } = require("../middleware/validation");
 
-// All book routes require authentication
 router.use(authMiddleware);
 
 router.post("/", validateBook, booksController.createBook);

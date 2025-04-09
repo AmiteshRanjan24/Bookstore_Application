@@ -1,6 +1,5 @@
 const Book = require("../models/book");
 
-// Create a new book
 exports.createBook = async (req, res) => {
   try {
     const book = new Book(req.body);
@@ -13,7 +12,6 @@ exports.createBook = async (req, res) => {
   }
 };
 
-// Get all books with optional filters
 exports.getAllBooks = async (req, res) => {
   try {
     const { author, category, rating, title } = req.query;
@@ -22,7 +20,7 @@ exports.getAllBooks = async (req, res) => {
     if (author) query.author = author;
     if (category) query.category = category;
     if (rating) query.rating = Number(rating);
-    if (title) query.title = { $regex: title, $options: "i" }; // Case-insensitive partial match
+    if (title) query.title = { $regex: title, $options: "i" };
 
     const books = await Book.find(query);
     res.status(200).json(books);
@@ -33,7 +31,6 @@ exports.getAllBooks = async (req, res) => {
   }
 };
 
-// Get book by ID
 exports.getBookById = async (req, res) => {
   try {
     const book = await Book.findById(req.params.id);
@@ -48,7 +45,6 @@ exports.getBookById = async (req, res) => {
   }
 };
 
-// Update book by ID
 exports.updateBook = async (req, res) => {
   try {
     const book = await Book.findByIdAndUpdate(req.params.id, req.body, {
@@ -68,7 +64,6 @@ exports.updateBook = async (req, res) => {
   }
 };
 
-// Delete book by ID
 exports.deleteBook = async (req, res) => {
   try {
     const book = await Book.findByIdAndDelete(req.params.id);
