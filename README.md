@@ -72,7 +72,7 @@ MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_secret_key
 ```
 
-#### 4. Run the server
+### 4. Run the server
 
 ```bash
 node server.js
@@ -86,14 +86,14 @@ node server.js
 http://localhost:5000/api
 ```
 
-## Authentication Routes
+### Authentication Routes
 
 | Method | Endpoint           | Description                  | Auth Required |
 | ------ | ------------------ | ---------------------------- | ------------- |
 | POST   | `/api/auth/signup` | Register a new user          | No            |
 | POST   | `/api/auth/login`  | Login user and get JWT token | No            |
 
-## User Management Routes
+### User Management Routes
 
 | Method | Endpoint                     | Description              | Auth Required |
 | ------ | ---------------------------- | ------------------------ | ------------- |
@@ -102,7 +102,7 @@ http://localhost:5000/api
 | DELETE | `/api/users/profile`         | Delete user account      | Yes           |
 | PUT    | `/api/users/change-password` | Change user password     | Yes           |
 
-## Books Routes
+### Books Routes
 
 | Method | Endpoint         | Description               | Auth Required |
 | ------ | ---------------- | ------------------------- | ------------- |
@@ -112,7 +112,7 @@ http://localhost:5000/api
 | PUT    | `/api/books/:id` | Update a book by ID       | Yes           |
 | DELETE | `/api/books/:id` | Delete a book by ID       | Yes           |
 
-## Query Parameters for Books Filtering
+### Query Parameters for Books Filtering
 
 | Query Param | Example                                   | Description                           |
 | ----------- | ----------------------------------------- | ------------------------------------- |
@@ -122,7 +122,7 @@ http://localhost:5000/api
 | `search`    | `?search=gatsby`                          | Search books by title (partial match) |
 | Combined    | `?category=Fiction&rating=4&search=great` | Multiple filters together             |
 
-## Complete Endpoint Summary
+### Complete Endpoint Summary
 
 ```
 POST   /api/auth/signup
