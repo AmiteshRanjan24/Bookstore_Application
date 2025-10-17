@@ -2,23 +2,23 @@
 
 A comprehensive RESTful API for managing a bookstore application with user authentication, book management, and advanced filtering capabilities.
 
-## ✨ Features
+## Features
 
-- 🔑 **Authentication & Authorization**
+- **Authentication & Authorization**
   - Secure JWT-based login & signup
-- 👥 **User Management**
+- **User Management**
   - Register, login, manage profile
-- 📚 **Books Management**
+- **Books Management**
   - CRUD operations for books with filtering and search
-- ✅ **Validation**
+- **Validation**
   - All request payloads validated using **Zod**
-- 🛡️ **Security**
+- **Security**
   - Passwords hashed with **bcrypt**
   - JWT token verification middleware
-- 📂 **Clean Project Structure**
+- **Clean Project Structure**
   - Config, Models, Controllers, Routes, Middlewares, Validations, Utils
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Node.js + Express.js (Backend Framework)
 - MongoDB + Mongoose (Database)
@@ -27,10 +27,10 @@ A comprehensive RESTful API for managing a bookstore application with user authe
 - Middleware-based request handling
 - Bcrypt (Password hashing)
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
-FlexiRent-backend/
+Bookstore_Application/
 ├── src/
 │   ├── app.js            # Express app setup
 │   ├── config/           # DB connection
@@ -40,31 +40,31 @@ FlexiRent-backend/
 │   ├── middlewares/      # Auth, error handling, role-based access
 │   ├── validations/      # Zod schemas
 │   └── utils/            # Helpers (JWT, hashing, responses)
-├── .env                          # Environment variables
+├── .env                  # Environment variables
 ├── .gitignore
 ├── package.json
 ├── README.md
-└── server.js                     # Entry point
+└── server.js             # Entry point
 ```
 
 ## Installation & Setup
 
-### 1. Clone the repo
+1. **Clone the repo**
 
 ```bash
 git clone https://github.com/AmiteshRanjan24/Bookstore_Application.git
 cd Bookstore_Application
 ```
 
-### 2. Install dependencies
+2. **Install dependencies**
 
 ```bash
 npm install
 ```
 
-### 3. Setup environment variables
+3. **Setup environment variables**
 
-Create a .env file in the root directory and configure it like:
+- Create a .env file in the root directory and configure it like:
 
 ```bash
 PORT=5000
@@ -72,7 +72,7 @@ MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_secret_key
 ```
 
-### 4. Run the server
+4. **Run the server**
 
 ```bash
 node server.js
@@ -141,16 +141,6 @@ GET    /api/books/:id
 PUT    /api/books/:id
 DELETE /api/books/:id
 ```
-
-**Total Endpoints:** 15 routes (2 auth + 4 user management + 9 books including filtering)
-
-## 📜 License
-
-- This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-- Contributions are welcome! Feel free to fork the repo, create a branch, and submit a pull request.
 
 ## Author
 
